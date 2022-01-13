@@ -7,8 +7,6 @@ from fabric.api import local
 from fabric import *
 from os.path import isdir
 
-env.hosts = ['34.139.124.220','34.74.25.112']
-env.user = 'ubuntu'
 
 def do_pack():
     """
@@ -21,5 +19,5 @@ def do_pack():
         file_path = "versions/web_static_{}.tgz".format(date)
         local("tar -cvzf {} web_static".format(file_path))
         return file_path
-    except:
+    except Exception:
         return None

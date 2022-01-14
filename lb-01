@@ -1,0 +1,3 @@
+#!/bin/bash
+#SSH conection to web_02
+ssh -i ~/.ssh/school ubuntu@3.93.73.184
